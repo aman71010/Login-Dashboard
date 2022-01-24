@@ -1,0 +1,56 @@
+.r-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.r-wrapper {
+    width: 40%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.r-title {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.r-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-div {
+    flex: 1;
+    min-width: 40%;
+    margin: 20px 10px 0 0;
+}
+
+.r-input {
+    width: 90%;
+    padding: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+.aggrement {
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+.r-button {
+    width: 30%;
+    padding: 10px 15px;
+    border: none;
+    background-color: #1c54b2;
+    color: white;
+    cursor: pointer;
+}
