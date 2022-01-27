@@ -1,0 +1,48 @@
+.n-container {
+    height: 60px;
+}
+
+.n-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.n-left {
+    flex: 1;
+}
+
+.logo {
+    font-weight: bold;
+    margin-left: 20px;
+    color: black;
+}
+
+.n-right {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    margin: 0 25px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.n-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: -20px;
+    cursor: pointer;
+}
