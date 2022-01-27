@@ -32,10 +32,6 @@
     color: black;
 }
 
-.n-dropdown {
-    position: relative;
-}
-
 .dropdown-content {
     display: none;
     padding: 10px;
@@ -43,6 +39,15 @@
     background-color: white;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    left: -20px;
+    right: 20px;
     cursor: pointer;
+}
+
+.n-dropdown {
+    position: relative;
+}
+
+.n-dropdown:hover .dropdown-content{
+    display: flex;
+    align-items: center;
 }

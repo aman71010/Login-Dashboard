@@ -36,9 +36,15 @@ const Navbar = () => {
                 <div className="n-right">
                     {user ? ( 
                         <>
-                            <div className="menu-item">Dashboard</div>
-                            <div className="menu-item">User profile</div>
-                            <div className="menu-item">Group</div>
+                            <Link style={{textDecoration: "none"}} to="/dashboard">
+                                <div className="menu-item">Dashboard</div>
+                            </Link>
+                            <Link style={{textDecoration: "none"}} to="/userprofile">
+                                <div className="menu-item">User profile</div>
+                            </Link>
+                            <Link style={{textDecoration: "none"}} to="/group">
+                                <div className="menu-item">Group</div>
+                            </Link>
                             <div className="n-dropdown">
                             <Avatar 
                                 style={{cursor: "pointer", marginRight: "20px"}}
