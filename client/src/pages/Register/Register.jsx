@@ -1,6 +1,7 @@
 import './register.css';
 import { useState, useEffect  } from 'react';
 import { useHistory } from 'react-router';
+import { publicRequest } from '../../requestMethod';
 
 const Register = () => {
 
@@ -30,22 +31,22 @@ const Register = () => {
         setIsSubmit(true);
     };
 
-    // useEffect( () => {
+    useEffect( () => {
 
-    //     const register = async () => {
-    //         if(Object.keys(formErrors).length === 0 && isSubmit === true){
-    //             try{
-    //                 const res = await publicRequest.post("/auth/register", formValues);
-    //                 if(res){
-    //                     history.push("/login");
-    //                 }
-    //             } catch(err){
-    //                 console.log(err);
-    //             }
-    //         }
-    //     };
-    //     register();
-    // });
+        const register = async () => {
+            if(Object.keys(formErrors).length === 0 && isSubmit === true){
+                try{
+                    const res = await publicRequest.post("/auth/register", formValues);
+                    if(res){
+                        history.push("/login");
+                    }
+                } catch(err){
+                    console.log(err);
+                }
+            }
+        };
+        register();
+    });
 
     const validate = (values) => {
         const errors = {};
@@ -90,9 +91,9 @@ const Register = () => {
                         <div className="input-div">
                             <input 
                                 className="r-input"
-                                placeholder="last name" 
-                                name="lastName" 
-                                value={formValues.lastName} 
+                                placeholder="first name" 
+                                name="firstName" 
+                                value={formValues.firstName} 
                                 onChange={inputHandler}
                             />
                             <p className='error-message'>{formErrors.firstName}</p>
