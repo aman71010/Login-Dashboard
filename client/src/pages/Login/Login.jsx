@@ -1,6 +1,7 @@
 import './login.css';
 import { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { publicRequest } from '../../requestMethod';
 
 const Login = () => {
 
@@ -26,25 +27,25 @@ const Login = () => {
         setIsSubmit(true);
     };
 
-    // useEffect( () => {
+    useEffect( () => {
 
-    //     const login = async () => {
-    //         if(Object.keys(formErrors).length === 0 && isSubmit === true){
-    //             try{
-    //                 const {data} = await publicRequest.post("/auth/login", formValues);
-    //                 if(data) {
-    //                     localStorage.setItem("profile", JSON.stringify(data));
-    //                     setTimeout( () => {
-    //                         history.push("/");
-    //                     }, 500); 
-    //                 }
-    //             } catch(err){
-    //                 setFormErrors({password: "wrong username or password"});
-    //             }
-    //         }
-    //     };
-    //     login();
-    // });
+        const login = async () => {
+            if(Object.keys(formErrors).length === 0 && isSubmit === true){
+                try{
+                    const {data} = await publicRequest.post("/auth/login", formValues);
+                    if(data) {
+                        localStorage.setItem("profile", JSON.stringify(data));
+                        setTimeout( () => {
+                            history.push("/");
+                        }, 500); 
+                    }
+                } catch(err){
+                    setFormErrors({password: "wrong username or password"});
+                }
+            }
+        };
+        login();
+    });
 
     const validate = (values) => {
         const errors = {};
